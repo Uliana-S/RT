@@ -1,17 +1,17 @@
 #include "main_header.h"
 
-int	parser_r(char **data, t_base_info *base)
+int	parser_r(char **data, t_base_info *base, void *mlx_ptr)
 {
 	t_resolution	*new;
-	// int				real_h;
-	// int				real_w;
+	int				real_h;
+	int				real_w;
 
 	if (count_data(data) != 3)
 		return (error_processing1(9));
 	new = malloc(sizeof(t_resolution));
 	if (new)
 	{
-		// mlx_get_screen_size(NULL, &real_w, &real_h);
+		mlx_get_screen_size(mlx_ptr, &real_w, &real_h);
 		if (check_pos_int(data[1]) == FALSE
 			|| check_pos_int(data[2]) == FALSE)
 			return (error_processing1(4));
@@ -19,10 +19,10 @@ int	parser_r(char **data, t_base_info *base)
 		new->height = ft_atoi(data[2]);
 		if (new->height <= 0 || new->width <= 0)
 			return (error_processing1(9));
-		// if (new->height > real_h)
-			// new->height = real_h;
-		// if (new->width > real_w)
-			// new->width = real_w;
+		if (new->height > real_h)
+			new->height = real_h;
+		if (new->width > real_w)
+			new->width = real_w;
 		base->resolution = new;
 		return (TRUE);
 	}
@@ -57,10 +57,10 @@ int	parser_a(char **data, t_base_info *base)
 	return (error_processing1(3));
 }
 
-int	parser_r_a(char **data_line, t_base_info *base)
+int	parser_r_a(char **data_line, t_base_info *base, void *mlx_ptr)
 {
 	if (data_line[0][0] == 'R' && base->resolution == NULL)
-		return (parser_r(data_line, base));
+		return (parser_r(data_line, base, mlx_ptr));
 	if (data_line[0][0] == 'A' && base->ambient == NULL)
 		return (parser_a(data_line, base));
 	return (error_processing1(8));

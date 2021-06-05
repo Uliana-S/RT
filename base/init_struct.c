@@ -29,6 +29,6 @@ void	init_data(t_all_data *data)
 	data->base = init_base();
 	data->scene = init_scene();
 	data->cam = NULL;
-	data->mlx = NULL;
+	data->mlx = mlx_init();
 	data->win = NULL;
 }

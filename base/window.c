@@ -42,7 +42,6 @@ void	window(t_all_data *data)
 {
 	t_img		img;
 
-	data->mlx = mlx_init();
 	data->win = mlx_new_window(data->mlx, data->base->resolution->width,
 			data->base->resolution->height, "Ray tracing");
 	img.img = mlx_new_image(data->mlx, data->base->resolution->width,

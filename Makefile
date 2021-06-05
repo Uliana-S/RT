@@ -1,14 +1,14 @@
 CC		=	gcc
 
-CFLAGS	=	-g -Wall -Wextra -Werror -I
+CFLAGS	=	-g -Wall -Wextra -I
 
-# -fsanitize=address
+# -fsanitize=address -Werror
 
 HEADERS	=	./includes/
 
 NAME	=	rt
 
-LIBMLX	=	./minilibx-linux/libmlx.a
+LIBMLX	=	./minilibx-linux/libmlx-linux.a
 
 SRC		=	./base/main.c ./base/check_file.c ./base/render_utils.c \
 			./base/render.c ./base/vec_dir.c ./base/window.c \

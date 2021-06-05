@@ -46,7 +46,7 @@ int	parser(char **data_line, t_all_data *data)
 		return (parser_obj(data_line, &data->scene->objects));
 	if ((ft_strlen(data_line[0]) == 1 && data_line[0][0] == 'R')
 		|| (ft_strlen(data_line[0]) == 1 && data_line[0][0] == 'A'))
-		return (parser_r_a(data_line, data->base));
+		return (parser_r_a(data_line, data->base, data->mlx));
 	if (ft_strlen(data_line[0]) == 1 && data_line[0][0] == 'c')
 		return (parser_c(data_line, &data->cam));
 	if (ft_strlen(data_line[0]) == 1 && data_line[0][0] == 'l')

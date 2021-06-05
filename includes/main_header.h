@@ -1,13 +1,14 @@
 #ifndef MAIN_HEADER_H
 # define MAIN_HEADER_H
 
-# include <unistd.h>
+# include <fcntl.h>
+# include <math.h>
+# include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include <stddef.h>
-# include <fcntl.h>
+# include <unistd.h>
+# include <X11/X.h>
 # include <../minilibx-linux/mlx.h>
-# include <math.h>
 # include "base_info_from_file.h"
 # include "scene_objects.h"
 # define TRUE			1
@@ -89,8 +90,8 @@ size_t			ft_strlen(char *str);
 int				parser(char **data_line, t_all_data *data);
 int				parser_obj(char **data_line, t_objects **objs);
 void			add_front_obj(t_objects **lst, t_objects *new_obj);
-int				parser_r_a(char **data_line, t_base_info *base);
-int				parser_r(char **data, t_base_info *base);
+int				parser_r_a(char **data_line, t_base_info *base, void *mlx_ptr);
+int				parser_r(char **data, t_base_info *base, void *mlx_ptr);
 int				parser_a(char **data, t_base_info *base);
 int				parser_l(char **data, t_all_light **l);
 int				create_light(char **data, t_light *li);

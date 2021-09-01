@@ -1,5 +1,6 @@
 #  Ray Tracing (for Linux)
 
+## About project
 The program displays the image in a window:
   * The arrow buttons switch the camera view.
   * Button ESC closes the window and exits the program.
@@ -39,3 +40,7 @@ order such as:
   * the cylinder diameter: 14.2
   * the cylinder height: 21.42
   * R,G,B colors in range [0,255]: 10, 0, 255
+## Compiling
+> ` make `
+## Start project
+> ` ./rt test_files/frog.rt `

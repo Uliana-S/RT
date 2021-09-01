@@ -1,5 +1,10 @@
 #  Ray Tracing (for Linux)
 
+The program displays the image in a window:
+  * The arrow buttons switch the camera view.
+  * Button ESC closes the window and exits the program.
+  * A red cross on the window frame covers the window and exits the program cleanly.
+
 Each element first’s information is the type identifier (composed by one or two
 character(s)), followed by all specific information for each object in a strict
 order such as:
@@ -34,8 +39,3 @@ order such as:
   * the cylinder diameter: 14.2
   * the cylinder height: 21.42
   * R,G,B colors in range [0,255]: 10, 0, 255
-
-The program displays the image in a window and respect the following rules:
-  * The arrow buttons switch the camera view.
-  * Button ESC closes the window and exits the program.
-  * A red cross on the window frame covers the window and exits the program cleanly.

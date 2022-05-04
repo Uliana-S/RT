@@ -69,7 +69,7 @@ double		ray_tracing(t_vector *vec_dir, t_all_data *data);
 double		intersection(t_vector *vec_dir, t_objects *scene,
 				t_vector *location);
 double		shadow(t_objects *scene, t_vector *p1, t_vector *pl,
-				t_vector *l);
+			t_vector *l);
 void		shine(t_vector *p, t_all_data *data, t_vector *normal,
 			t_color *light_color);
 t_vector	normal_vector(t_vector *point, t_objects *obj);

@@ -56,6 +56,10 @@ order such as:
  - Utility functions from BSD systems - development files (package libbsd-dev)
  - **e.g. _sudo apt-get install gcc make xorg libxext-dev libbsd-dev_ (Debian/Ubuntu)**
 ## Compiling
-> ` make `
+```
+make
+```
 ## Start project
-> ` ./rt test_files/sample_scene.rt `
+```
+./rt test_files/sample_scene.rt
+```
